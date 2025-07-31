@@ -1,9 +1,10 @@
 package com.artigo.livro.Service;
 
 import com.artigo.livro.DTO.LivroDTO;
+import com.artigo.livro.LivroModel.LivroModel;
 
 public interface ILivroService {
-    public LivroDTO criarLivro(LivroDTO livro);
+    public LivroModel criarLivro(LivroModel livroModel);
 }
 
 

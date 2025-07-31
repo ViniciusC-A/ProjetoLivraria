@@ -2,14 +2,14 @@ package com.artigo.livro.DTO;
 
 import java.util.Date;
 
-import jakarta.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
-@Entity
+
+
 public class LivroDTO {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long livroID;
 
     private String titulo;
 
@@ -17,25 +17,6 @@ public class LivroDTO {
 
     private int anoPublicacao;
 
-   // @ManyToOne
-  //  @JoinColumn(name = "autorID")
-  //  private AutorDTO autor;
-
- //   public AutorDTO getAutor() {
- //       return autor;
-//    }
-
-  //  public void setAutor(AutorDTO autor) {
-  //      this.autor = autor;
-  //  }
-
-    public Long getLivroID() {
-        return livroID;
-    }
-
-    public void setLivroID(Long livroID) {
-        this.livroID = livroID;
-    }
 
     public String getTitulo() {
         return titulo;
