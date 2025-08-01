@@ -1,13 +1,11 @@
-package com.artigo.livro.AutorModel;
-
-import com.artigo.livro.DTO.LivroDTO;
-import com.artigo.livro.LivroModel.LivroModel;
+package com.artigo.livro.model;
 
 import javax.persistence.*;
 import java.util.List;
 
+@Table (name = "autor")
 @Entity
-public class AutorModel {
+public class Autor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,13 +20,13 @@ public class AutorModel {
 
     @OneToMany
     @JoinColumn(name = "livroID")
-    private List<LivroModel> livro;
+    private List<Livro> livro;
 
-    public List<LivroModel> getLivro() {
+    public List<Livro> getLivro() {
         return livro;
     }
 
-    public void setLivro(List<LivroModel> livro) {
+    public void setLivro(List<Livro> livro) {
         this.livro = livro;
     }
 

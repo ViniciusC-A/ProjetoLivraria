@@ -1,9 +1,8 @@
 package com.artigo.livro.LivroRepository;
 
-import com.artigo.livro.DTO.LivroDTO;
-import com.artigo.livro.LivroModel.LivroModel;
+import com.artigo.livro.model.Livro;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface LivroRepository extends JpaRepository<LivroModel, Long> {
+public interface LivroRepository extends JpaRepository<Livro, Long> {
 
 }

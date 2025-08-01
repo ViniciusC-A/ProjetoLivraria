@@ -1,7 +1,6 @@
 package com.artigo.livro.Controller;
 
-import com.artigo.livro.DTO.LivroDTO;
-import com.artigo.livro.LivroModel.LivroModel;
+import com.artigo.livro.model.Livro;
 import com.artigo.livro.Service.ILivroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/livros")
 public class LivroController {
     @Autowired
     private ILivroService livroService;
@@ -19,9 +18,9 @@ public class LivroController {
         return livroService;
     }
 
-    @PostMapping("/livro")
-    public LivroModel novoLivro(@RequestBody LivroModel livroModel){
-        LivroModel livroNovo = getLivroService().criarLivro(livroModel);
+    @PostMapping
+    public Livro novoLivro(@RequestBody Livro livro){
+        Livro livroNovo = getLivroService().criarLivro(livro);
         return livroNovo;
 
 

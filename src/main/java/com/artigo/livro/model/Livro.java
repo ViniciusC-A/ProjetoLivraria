@@ -1,13 +1,11 @@
-package com.artigo.livro.LivroModel;
+package com.artigo.livro.model;
 
-import com.artigo.livro.AutorModel.AutorModel;
-import com.artigo.livro.DTO.AutorDTO;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "livro")
-public class LivroModel {
+public class Livro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +20,7 @@ public class LivroModel {
 
     @ManyToOne
     @JoinColumn(name = "autor_id")
-    private AutorModel autor;
+    private Autor autor;
 
     public Long getLivroID() {
         return livroID;
