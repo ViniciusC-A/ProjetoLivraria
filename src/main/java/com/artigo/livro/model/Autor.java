@@ -18,9 +18,9 @@ public class Autor {
     @Column(name = "nacionalidade")
     private String nacionalidade;
 
-    @OneToMany
-    @JoinColumn(name = "livroID")
-    private List<Livro> livro;
+    @OneToMany(mappedBy = "autor")
+    private List<Livro> livros;
+
 
     public List<Livro> getLivro() {
         return livro;

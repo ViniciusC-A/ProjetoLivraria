@@ -1,6 +1,4 @@
-package com.artigo.livro.DTO;
-
-import javax.persistence.*;
+package com.artigo.livro.dto;
 
 
 import java.util.List;

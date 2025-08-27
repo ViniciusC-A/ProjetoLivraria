@@ -1,12 +1,6 @@
-package com.artigo.livro.DTO;
+package com.artigo.livro.dto;
 
 import java.util.Date;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-
 
 
 public class LivroDTO {
